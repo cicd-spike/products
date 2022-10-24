@@ -5,16 +5,10 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    name: Build Image
+  deploy:
+    name: Deploy
     runs-on: self-hosted
 
     steps: 
       - name: check
         run: echo "hooray!"
-
-  # publish:
-  #   name: Push Image
-
-  # deploy:
-  #   name: Deploy Container

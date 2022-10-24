@@ -15,4 +15,12 @@ jobs:
 
       - name: Run tests
         run: npm install && npm run test
+
+  build-push:
+    name: Build & Push
+    runs-on: self-hosted
+
+    steps:
+      - name: Placeholder
+        run: echo "build and push!"
       
