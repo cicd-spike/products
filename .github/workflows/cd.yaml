@@ -1,0 +1,20 @@
+name: products deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Image
+    runs-on: self-hosted
+
+    steps: 
+      - name: check
+        run: echo "hooray!"
+
+  # publish:
+  #   name: Push Image
+
+  # deploy:
+  #   name: Deploy Container
