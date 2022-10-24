@@ -1,0 +1,26 @@
+name: products deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Image
+    runs-on: self-hosted
+
+    steps: 
+      - uses: 
+
+      - name:
+        uses:
+        with:
+
+      - name:
+        run:
+
+  publish:
+    name: Push Image
+
+  deploy:
+    name: Deploy Container
