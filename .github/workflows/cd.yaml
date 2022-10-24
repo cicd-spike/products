@@ -10,14 +10,7 @@ jobs:
     runs-on: self-hosted
 
     steps: 
-      - uses: 
-
-      - name:
-        uses:
-        with:
-
-      - name:
-        run:
+      - run: echo "hooray!"
 
   publish:
     name: Push Image
