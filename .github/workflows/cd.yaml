@@ -13,8 +13,8 @@ jobs:
       - name: check
         run: echo "hooray!"
 
-  publish:
-    name: Push Image
+  # publish:
+  #   name: Push Image
 
-  deploy:
-    name: Deploy Container
+  # deploy:
+  #   name: Deploy Container
