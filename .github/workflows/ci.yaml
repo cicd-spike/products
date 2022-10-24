@@ -21,6 +21,9 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Placeholder
-        run: echo "build and push!"
+      - name: Build image
+        run: docker build -t wesha/shopping-products:0.0.0 .
+
+      - name: Push image
+        run: docker push wesha/shopping-products:0.0.0
       
