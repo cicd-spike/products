@@ -9,9 +9,7 @@ jobs:
     name: Build & Push
     runs-on: self-hosted
 
-    steps:
-      - uses: actions/checkout@v2
-      
+    steps:      
       - name: Build image
         run: docker build -t wesha/shopping-products:0.0.0 .
 
