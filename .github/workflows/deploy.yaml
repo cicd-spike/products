@@ -1,8 +1,11 @@
 name: products deployment
 
 on:
-  push:
+  workflow_run:
+    workflows: ["products build and push"]
     branches: [main]
+    types: 
+      - completed
 
 jobs:
   deploy-dev:
