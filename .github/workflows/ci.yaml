@@ -11,6 +11,8 @@ jobs:
     container: node:17-alpine
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Run tests
-        run: npm install && npm run test
+        run: cd products && npm install && npm run test
       
