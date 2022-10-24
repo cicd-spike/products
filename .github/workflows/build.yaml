@@ -1,4 +1,4 @@
-name: products deployment
+name: products build and push
 
 on:
   push:
@@ -22,11 +22,4 @@ jobs:
       - name: Push image
         run: docker push wesha/shopping-products:0.0.0
       
-  deploy:
-    name: Deploy
-    needs: build-push
-    runs-on: self-hosted
-
-    steps: 
-      - name: check
-        run: echo "hooray!"
+  
