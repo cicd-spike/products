@@ -1,26 +1,17 @@
-name: products integration
+name: products deployment
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
-  test:
-    name: Test
-    runs-on: self-hosted
-    container: node:17-alpine
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run tests
-        run: npm install && npm run test
-
   build-push:
     name: Build & Push
     runs-on: self-hosted
 
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Build image
         run: docker build -t wesha/shopping-products:0.0.0 .
 
@@ -33,3 +24,10 @@ jobs:
       - name: Push image
         run: docker push wesha/shopping-products:0.0.0
       
+  deploy:
+    name: Deploy
+    runs-on: self-hosted
+
+    steps: 
+      - name: check
+        run: echo "hooray!"
