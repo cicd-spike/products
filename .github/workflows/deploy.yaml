@@ -5,10 +5,28 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
-    name: Deploy
+  deploy-dev:
+    name: Deploy to dev
     runs-on: self-hosted
 
     steps: 
-      - name: check
+      - name: Echo
         run: echo "hooray!"
+
+  e2e-tests:
+    name: Run e2e tests on dev
+    needs: deploy-dev
+    runs-on: self-hosted
+
+    steps:
+      - name: Echo
+        run: echo "running tests!"
+
+  deploy-staging:
+    name: Deploy to staging
+    needs: e2e-tests
+    runs-on: self-hosted
+
+    steps:
+      - name: Echo
+        run: echo "made it this far!"
